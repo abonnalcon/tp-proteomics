@@ -36,15 +36,13 @@ Cette partie du TP est découpée en 4 grandes parties avec pour chacune des par
 
 ##### En quoi consiste l’approche Shotgun proteomics?
 
-```
-
-```
+C'est une technique de protéomique pour identifier des protéines par spetrocmétrie de masse.
+Approche bottom-up : prendre un échantillon et le digérer --> on a une information peptidique.
+A l'inverse, une approche top down prend l'échantillon en entier (proteine non digéré) 
 
 ##### Quel est l’objectif de cette approche ?
 
-```
-
-```
+Identifier des proteines dans un contexte biologique donnée. 
 
 #### Procédure
 -	Rechercher la base de données des protéines d’E. coli sur [UNIPROT](https://www.uniprot.org/)
@@ -58,20 +56,15 @@ Cette partie du TP est découpée en 4 grandes parties avec pour chacune des par
 
 ##### L’identification des protéines/ peptides se réalise grâce à une base de données de protéines. Quelle comparaison va être effectuée?
 
-```
-
-```
+Comparer les données brutes ( expérimentales, d'un point de vue peptide) au protéome de E.Coli
 
 ##### Existe t’il d’autres types de bases de données pour réaliser l’identification des peptides trypsiques dans un spectre?
 
-```
-
-```
+Utiliser des base de données de protéines spectrales.
+Comparer  données  expérimentales du spectro à des données spectrales. (Si on a pas le protéome, c'est à dire les sequences des proteines, le .fasta) 
 
 ##### Est-ce qu’il est possible d’identifier des peptides sans base de données?
-```
-
-```
+Oui
 ##### Combien de protéines sont identifiées dans le protéome bactérien?
 ```
 
@@ -85,9 +78,8 @@ Cette partie du TP est découpée en 4 grandes parties avec pour chacune des par
 
 ```
 ##### A quoi correspond la protéine P00761 et quelle est sa fonction ? 
-```
-
-```
+La trypsine, on a digéré par trypsine donc la proteine trypsine est présente dans l'échantillon espérimental.
+Il faut donc la rajouter dans la base de données/ protéome.fasta de E.Coli 
 ##### Pourquoi doit-on rajouter cette protéine dans le fichier FASTA final du protéome bactérien?
 ```
 
