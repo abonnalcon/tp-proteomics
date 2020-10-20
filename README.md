@@ -56,7 +56,7 @@ Identifier des proteines dans un contexte biologique donnée.
 
 ##### L’identification des protéines/ peptides se réalise grâce à une base de données de protéines. Quelle comparaison va être effectuée?
 
-Comparer les données brutes ( expérimentales, d'un point de vue peptide) au protéome de E.Coli
+Comparer les données brutes (expérimentales, d'un point de vue peptide) au protéome de E.Coli
 
 ##### Existe t’il d’autres types de bases de données pour réaliser l’identification des peptides trypsiques dans un spectre?
 
@@ -66,24 +66,19 @@ Comparer  données  expérimentales du spectro à des données spectrales. (Si o
 ##### Est-ce qu’il est possible d’identifier des peptides sans base de données?
 Oui
 ##### Combien de protéines sont identifiées dans le protéome bactérien?
-```
-
-```
+4391  Sur Uniprot , Escheria Coli
 ##### Comment la liste des séquences des protéines est-elle établie ? Est-elle complète? 
-```
-
-```
+Annoté manuellement ou in silico ( par ordinateur, automatique)
+Incomplète
 ##### Quelle est la différence entre des séquences Swiss-prot et TremBL?
-```
-
-```
+Swiss Prot: Manuellement par expert
+TremBL : automatique par ordinateur
 ##### A quoi correspond la protéine P00761 et quelle est sa fonction ? 
 La trypsine, on a digéré par trypsine donc la proteine trypsine est présente dans l'échantillon espérimental.
 Il faut donc la rajouter dans la base de données/ protéome.fasta de E.Coli 
 ##### Pourquoi doit-on rajouter cette protéine dans le fichier FASTA final du protéome bactérien?
-```
-
-```
+On a digéré les proteines avec la trypsine donc la trypsine va être présente dans le mélange de peptides.
+La séquence va être retrouvé 
 
 ### Création de la « peak list »
 
@@ -105,9 +100,10 @@ De nombreux petits logiciels existent pour convertir vos fichiers bruts dans un 
 
 ##### Les données de QExactive ont été enregistrées en mode centroïde et non pas en mode Profiling. D’après vous quelle est la différence entre les deux modes?
 
-```
+Centroïde : réunis toutes les données d'isotopes --> On ne distingue plus les isotopes, seulement les différences de charges; prends moins de place 
+centroide : 1 seul pic par peptide chargé
+Profiling : les données de base : plusieurs pics --> courbe en gaussienne pour les différents isotopes pour 1 peptide chargé
 
-```
 
 ### Identification des peptides par approche PSM Peptide to Spectrum Matching
 
@@ -128,30 +124,30 @@ NB : si vous avez des messages d’erreur qui s’affichent (missing precursor c
 
 #### Questions 
 ##### Pourquoi est-il important de bien choisir sa base de données?
-```
-```
+On compare nos peptides trouvés avec des peptides simulés à partir des bases de données.
+Les scores changent en fonction des bases de données.
+En fonction de ce que l'on veut faire, on choisit différentes bases de données (swiss Prot ou TremBL)
+
 ##### Est-ce que l’on retrouvera toujours les mêmes protéines au cours du temps ?
-```
-```
+Non car les bases de données évoluent. 
 
 ##### Comment la taille de la base de données peut affecter le score de la protéine recherchée?
 ```
 ```
 
 ##### Est-ce que les modifications ajoutées sont les seules modifications que l’on peut attendre dans une expérience de shotgun proteomics?
-```
-```
+On connait les modifications faites pour la préparation ( modifications ajoutées)
+Mais on ne connait pas les modifications post-traductionnelles de la cellule.
 
 ##### Vous avez choisi la trypsine comme enzyme et choisi « specific », qu’est-ce que cela signifie, et comment cela peut affecter le processing ? 
-```
-```
+digestion théorique trés spécifique : coupe seulement à K etR (Arginine et  Lysine)
 
 ##### Qu’est-ce qu’un missed cleavage ? pourquoi 2 et pas 0 ?
-```
-```
+Peut louper des K et R. 
+La digestion n'est jamais parfaite, au lieu d'avoir deux peptides, on peut en avoir deux.
+On considère que la digestion n'est pas parfaite donc on ne met pas 0, mais la trypsine est assez efficace donc elle ne loupe pas beaucoup de K et R.
 ##### Qu’est-ce que la tolérance en masse, comment la calcule-t-on ?
-```
-```
+écart de masse maximale entre la masse du peptide simulé et du peptide expérimentale issu de spectro 
 
 ### Visualisation des PSM, peptides - protéines
 
